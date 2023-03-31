@@ -1,0 +1,272 @@
+/* Reset all (*) things */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(93, 88, 91);
+    font-family: "Montserrat", sans-serif;
+
+}
+
+
+html, body, .app, .bg{
+    max-width: 100vw;
+    width: 98.5vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+/* scroll */
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
+    margin-top: 20px;
+    border: 2px solid rgb(33, 33, 37);
+    border-radius: 5px;
+
+    background-color: rgb(43, 42, 46);
+    color: rgb(93, 88, 91);
+
+    width: 90vw;
+
+    padding: 5px;
+}
+
+.navBar > .logo {
+    width: 50px;
+}
+
+
+
+.app{
+    background: rgb(126,6,26);
+    background: linear-gradient(85deg, rgba(126,6,26,1) 0%, rgba(109,11,28,1) 0%, rgba(99,14,30,1) 0%, rgba(87,17,32,1) 0%, rgba(90,16,31,1) 0%, rgba(82,18,32,1) 0%, rgba(74,21,33,1) 12%, rgba(71,22,33,1) 19%, rgba(34,33,39,1) 100%);
+    background-repeat: repeat;
+    height: 100%;
+    min-height: 150vh;
+    position: relative;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.pokemon-card{
+    border: 2px solid black;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 10px 5px 10px;
+    max-width: 120px;
+
+    margin: 0;
+
+    transition: all 0.3s ease-out; 
+
+}
+.pokemon-card:hover{
+    cursor: pointer;
+    transform: scale(1.15);
+    cursor: pointer;
+}
+.pokemon-card > .pokemon-img{
+    max-height: 100px;
+}
+.pokemon-name{
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.types{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.5px solid black;
+    border-radius: 1px;
+
+    margin-top: 5px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100vw;
+}
+
+
+/* Style des cartes en grand plan */
+
+.bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 9;
+}
+.menu{
+    background-color: aliceblue;
+    width: 40vw;
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+
+
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.menu-name{
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+
+}
+.menu-img{
+    width:30%;
+}
+
+.menu-types{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+    border: 0.5px solid black;
+    border-radius: 1px;
+}
+.menu-stats{
+    margin-top: 15px;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+}
+.menu > .nextCross{
+    position: absolute;
+    top: 200px;
+    right: 0;
+    font-size: 50px;
+    user-select: none;
+    width: 100px;
+}
+.menu > .nextCross:hover{
+    cursor: pointer;
+}
+.croix{
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    transition: all .3s ease;
+    font-size: 30px;
+}
+.croix:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.sidebar{
+    height: 100%;
+    width: 20vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(43, 42, 46);
+    color: rgb(93, 88, 91);    
+    transform: translateX(-20vw);
+    transition: all 0.5s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar > div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 1px solid black;
+    
+}
+.sidebar > div > *{
+    color: rgb(126,6,26);
+    font-weight: 700;
+}
+.active{
+    display: block;
+    transform: translateX(0);
+}
+.filterImg{
+    width: 30px;
+    right: 75px;
+    position: absolute;
+    top: 100px;
+}
+
+
+
+/* For the language button changer */
+
+.languageChanger {
+	background:linear-gradient(to bottom, #4C1421 5%, #91263F 100%);
+	background-color:#4C1421;
+	border-radius:7px;
+	border:2px solid #4C1421;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:18px;
+	font-weight:bold;
+	padding:9px 29px;
+	text-decoration:none;
+}
+.languageChanger:hover {
+	background:linear-gradient(to bottom, #91263F 5%, #4C1421 100%);
+	background-color:#C73456;
+}
+
+
+/* For the input texte searcher */
+#search-pokemon {
+    padding: 5px;
+    font-size: 15px;
+    border-width: 4px;
+    border-color:#91263F ;
+    background-color: #ffffff;
+    
+    border-style: solid;
+    border-radius: 43px;
+
+}
+#search-pokemon:focus {
+    outline: none;
+}
+
